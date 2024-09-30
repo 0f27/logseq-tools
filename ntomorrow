@@ -1,0 +1,3 @@
+#!/bin/bash
+
+$VISUAL $HOME/org/journals/$(date -d "-1 days ago" +%Y_%m_%d).org
