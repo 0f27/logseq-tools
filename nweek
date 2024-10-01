@@ -1,3 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env python3
 
-$VISUAL $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org
+import os
+import subprocess
+import datetime
+
+HOME = os.environ["HOME"]
+VISUAL = os.environ["VISUAL"]
+
+base = datetime.datetime.today()
+dates_before = [base - datetime.timedelta(days=x) for x in range(7)]
+dates_after = [base + datetime.timedelta(days=x) for x in range(3)]
+date_list = set(dates_before + dates_after)
+
+example_command = '$VISUAL $HOME/org/journals/$(date -d "0 days ago" +%Y_%m_%d).org'
+
+date_files = sorted(
+    [f"{HOME}/org/journals/" + date.strftime("%Y_%m_%d") + ".org" for date in date_list]
+)
+
+# print(date_files)
+subprocess.run([VISUAL] + date_files)

@@ -26,5 +26,5 @@ Set of scripts to handle your LogSeq vault with your default text editor
 - [ ] [ntodo](ntodo) - find all TODO entries, cut and paste into pages/projects.org, under _inbox_ header
 - [ ] [ndone](ndone) - cut all DONE entries from pages/projects.org and paste into pages/archive.org
 - [ ] [ndate](ndate) - open daily note for specified date or create new one
-- [ ] [nweek](nweek) - open 7 daily notes up tp today + 3 in future
+- [x] [nweek](nweek) - open 7 daily notes up tp today + 3 in future
 - [ ] [ntag](ntag) -
